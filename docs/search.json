@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "nlp/projeto1.html",
+    "href": "nlp/projeto1.html",
+    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "section": "",
+    "text": "Este projeto consiste na construção de um assistente de programação em Python que combina o poder dos modelos de linguagem da plataforma Groq com a simplicidade e interatividade do Streamlit.\nO assistente é capaz de:\n\n💬 Manter um chat interativo com histórico de conversa\n💡 Sugerir soluções e boas práticas de código Python\n🐛 Explicar erros e bugs de forma didática\n⚙️ Gerar código do zero a partir de descrições em linguagem natural"
+  },
+  {
+    "objectID": "nlp/projeto1.html#visão-geral",
+    "href": "nlp/projeto1.html#visão-geral",
+    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "section": "",
+    "text": "Este projeto consiste na construção de um assistente de programação em Python que combina o poder dos modelos de linguagem da plataforma Groq com a simplicidade e interatividade do Streamlit.\nO assistente é capaz de:\n\n💬 Manter um chat interativo com histórico de conversa\n💡 Sugerir soluções e boas práticas de código Python\n🐛 Explicar erros e bugs de forma didática\n⚙️ Gerar código do zero a partir de descrições em linguagem natural"
+  },
+  {
+    "objectID": "nlp/projeto1.html#tecnologias-utilizadas",
+    "href": "nlp/projeto1.html#tecnologias-utilizadas",
+    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "section": "Tecnologias Utilizadas",
+    "text": "Tecnologias Utilizadas\n\n\n\nTecnologia\nFunção\n\n\n\n\nGroq API\nInferência ultra-rápida com LLMs\n\n\nopenai/gpt-oss-20b\nModelo de linguagem base\n\n\nStreamlit\nInterface web interativa\n\n\nPython\nLinguagem principal"
+  },
+  {
+    "objectID": "nlp/projeto1.html#arquitetura-do-projeto",
+    "href": "nlp/projeto1.html#arquitetura-do-projeto",
+    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "section": "Arquitetura do Projeto",
+    "text": "Arquitetura do Projeto\n# Exemplo de como a conversa é gerenciada com histórico\nfrom groq import Groq\nimport streamlit as st\n\nclient = Groq()\n\nif \"messages\" not in st.session_state:\n    st.session_state.messages = [\n        {\"role\": \"system\", \"content\": \"Você é um assistente especialista em Python.\"}\n    ]\n\n# Exibe histórico\nfor msg in st.session_state.messages[1:]:\n    with st.chat_message(msg[\"role\"]):\n        st.markdown(msg[\"content\"])\n\n# Input do usuário\nif prompt := st.chat_input(\"Faça sua pergunta sobre Python...\"):\n    st.session_state.messages.append({\"role\": \"user\", \"content\": prompt})\n    \n    response = client.chat.completions.create(\n        model=\"openai/gpt-oss-20b\",\n        messages=st.session_state.messages\n    )\n    \n    answer = response.choices[0].message.content\n    st.session_state.messages.append({\"role\": \"assistant\", \"content\": answer})"
+  },
+  {
+    "objectID": "nlp/projeto1.html#principais-desafios",
+    "href": "nlp/projeto1.html#principais-desafios",
+    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "section": "Principais Desafios",
+    "text": "Principais Desafios\nGerenciamento de histórico: Manter o contexto da conversa entre turnos exigiu o uso do st.session_state do Streamlit para persistir as mensagens.\nPrompt engineering: Definir um system prompt eficaz foi essencial para garantir respostas focadas em Python e com qualidade técnica."
+  },
+  {
+    "objectID": "nlp/projeto1.html#resultados",
+    "href": "nlp/projeto1.html#resultados",
+    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "section": "Resultados",
+    "text": "Resultados\n\nInterface responsiva e intuitiva para desenvolvedores\nRespostas com latência baixa graças à infraestrutura da Groq\nHistórico de conversa preservado durante toda a sessão"
+  },
+  {
+    "objectID": "nlp/projeto1.html#próximos-passos",
+    "href": "nlp/projeto1.html#próximos-passos",
+    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "section": "Próximos Passos",
+    "text": "Próximos Passos\n\nDeploy no Streamlit Cloud\nAdicionar suporte a múltiplos modelos da Groq\nImplementar upload de arquivos .py para análise"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Beatriz Andrade",
+    "section": "",
+    "text": "Sou cientista de dados com experiência em Machine Learning, NLP/LLMs, análise exploratória e engenharia de dados. Este site reúne meus principais projetos com código, visualizações e resultados detalhados."
+  },
+  {
+    "objectID": "index.html#olá-seja-bem-vindo-ao-meu-portfólio",
+    "href": "index.html#olá-seja-bem-vindo-ao-meu-portfólio",
+    "title": "Beatriz Andrade",
+    "section": "",
+    "text": "Sou cientista de dados com experiência em Machine Learning, NLP/LLMs, análise exploratória e engenharia de dados. Este site reúne meus principais projetos com código, visualizações e resultados detalhados."
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "Beatriz Andrade",
+    "section": "Skills",
+    "text": "Skills\n\n\n\nÁrea\nFerramentas\n\n\n\n\nMachine Learning\nScikit-learn, XGBoost, LightGBM\n\n\nNLP / LLMs\nHuggingFace, LangChain, spaCy\n\n\nVisualização\nPlotly, Matplotlib, Seaborn\n\n\nEngenharia de Dados\nPandas, SQL, Airflow\n\n\nDeploy\nFastAPI, Docker, Streamlit"
+  },
+  {
+    "objectID": "index.html#contato",
+    "href": "index.html#contato",
+    "title": "Beatriz Andrade",
+    "section": "Contato",
+    "text": "Contato\n\n📧 biasandrade@gmail.com\n💼 LinkedIn\n🐙 GitHub"
+  },
+  {
+    "objectID": "projetos.html",
+    "href": "projetos.html",
+    "title": "Projetos",
+    "section": "",
+    "text": "Aqui estão meus principais projetos organizados por área."
+  },
+  {
+    "objectID": "projetos.html#machine-learning",
+    "href": "projetos.html#machine-learning",
+    "title": "Projetos",
+    "section": "Machine Learning",
+    "text": "Machine Learning\n\nNome do Projeto 1\nBreve descrição do projeto. Tecnologias: Scikit-learn, XGBoost, Pandas"
+  },
+  {
+    "objectID": "projetos.html#analise-exploratoria-e-visualizacao",
+    "href": "projetos.html#analise-exploratoria-e-visualizacao",
+    "title": "Projetos",
+    "section": "Analise Exploratoria e Visualizacao",
+    "text": "Analise Exploratoria e Visualizacao\n\nNome do Projeto 2\nBreve descrição do projeto. Tecnologias: Plotly, Seaborn, Pandas"
+  },
+  {
+    "objectID": "projetos.html#nlp-e-llms",
+    "href": "projetos.html#nlp-e-llms",
+    "title": "Projetos",
+    "section": "NLP e LLMs",
+    "text": "NLP e LLMs\n\nAssistente de Programacao Python com Groq e Streamlit\nChatbot especializado em Python combinando LLMs da Groq com interface Streamlit. Tecnologias: Groq API, Streamlit, Python"
+  },
+  {
+    "objectID": "projetos.html#engenharia-de-dados",
+    "href": "projetos.html#engenharia-de-dados",
+    "title": "Projetos",
+    "section": "Engenharia de Dados",
+    "text": "Engenharia de Dados\n\nNome do Projeto 4\nBreve descrição do projeto. Tecnologias: Airflow, SQL, Docker\n\n```"
+  }
+]

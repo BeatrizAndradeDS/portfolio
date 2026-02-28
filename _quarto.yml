@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+
+website:
+  title: "Beatriz Andrade — Data Science Portfolio"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projetos.qmd
+        text: Projetos
+      - href: about.qmd
+        text: Sobre
+    right:
+      - icon: github
+        href: https://github.com/BeatrizAndradeDS
+      - icon: linkedin
+        href: https://linkedin.com/in/andrade-beatriz
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false

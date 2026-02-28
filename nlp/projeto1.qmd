@@ -1,0 +1,79 @@
+---
+title: "Assistente de Programação Python com Groq + Streamlit"
+description: "Chatbot especializado em Python que combina LLMs da Groq com interface interativa via Streamlit"
+date: "2026-01-01"
+categories: [NLP, LLMs, Streamlit, Python]
+---
+
+## Visão Geral
+
+Este projeto consiste na construção de um **assistente de programação em Python** 
+que combina o poder dos modelos de linguagem da plataforma **Groq** com a 
+simplicidade e interatividade do **Streamlit**.
+
+O assistente é capaz de:
+
+- 💬 Manter um chat interativo com histórico de conversa
+- 💡 Sugerir soluções e boas práticas de código Python
+- 🐛 Explicar erros e bugs de forma didática
+- ⚙️ Gerar código do zero a partir de descrições em linguagem natural
+
+## Tecnologias Utilizadas
+
+| Tecnologia | Função |
+|---|---|
+| Groq API | Inferência ultra-rápida com LLMs |
+| openai/gpt-oss-20b | Modelo de linguagem base |
+| Streamlit | Interface web interativa |
+| Python | Linguagem principal |
+
+## Arquitetura do Projeto
+```python
+# Exemplo de como a conversa é gerenciada com histórico
+from groq import Groq
+import streamlit as st
+
+client = Groq()
+
+if "messages" not in st.session_state:
+    st.session_state.messages = [
+        {"role": "system", "content": "Você é um assistente especialista em Python."}
+    ]
+
+# Exibe histórico
+for msg in st.session_state.messages[1:]:
+    with st.chat_message(msg["role"]):
+        st.markdown(msg["content"])
+
+# Input do usuário
+if prompt := st.chat_input("Faça sua pergunta sobre Python..."):
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    
+    response = client.chat.completions.create(
+        model="openai/gpt-oss-20b",
+        messages=st.session_state.messages
+    )
+    
+    answer = response.choices[0].message.content
+    st.session_state.messages.append({"role": "assistant", "content": answer})
+```
+
+## Principais Desafios
+
+**Gerenciamento de histórico:** Manter o contexto da conversa entre turnos 
+exigiu o uso do `st.session_state` do Streamlit para persistir as mensagens.
+
+**Prompt engineering:** Definir um system prompt eficaz foi essencial para 
+garantir respostas focadas em Python e com qualidade técnica.
+
+## Resultados
+
+- Interface responsiva e intuitiva para desenvolvedores
+- Respostas com latência baixa graças à infraestrutura da Groq
+- Histórico de conversa preservado durante toda a sessão
+
+## Próximos Passos
+
+- [ ] Deploy no Streamlit Cloud
+- [ ] Adicionar suporte a múltiplos modelos da Groq
+- [ ] Implementar upload de arquivos `.py` para análise

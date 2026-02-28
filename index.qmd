@@ -1,0 +1,27 @@
+---
+title: "Beatriz Andrade"
+subtitle: "Data Scientist | Machine Learning | NLP | Data Engineering"
+page-layout: full
+---
+
+## Olá, seja bem-vindo ao meu portfólio!
+
+Sou cientista de dados com experiência em **Machine Learning**, **NLP/LLMs**, 
+**análise exploratória** e **engenharia de dados**. Este site reúne meus principais 
+projetos com código, visualizações e resultados detalhados.
+
+## Skills
+
+| Área | Ferramentas |
+|---|---|
+| Machine Learning | Scikit-learn, XGBoost, LightGBM |
+| NLP / LLMs | HuggingFace, LangChain, spaCy |
+| Visualização | Plotly, Matplotlib, Seaborn |
+| Engenharia de Dados | Pandas, SQL, Airflow |
+| Deploy | FastAPI, Docker, Streamlit |
+
+## Contato
+
+- 📧 biasandrade@gmail.com
+- 💼 [LinkedIn](https://linkedin.com/in/andrade-beatriz)
+- 🐙 [GitHub](https://github.com/BeatrizAndradeDS)
