@@ -2,51 +2,72 @@
   {
     "objectID": "nlp/projeto1.html",
     "href": "nlp/projeto1.html",
-    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "title": "Pra onde vamos? — Assistente de Planejamento de Viagens com IA",
     "section": "",
-    "text": "Este projeto consiste na construção de um assistente de programação em Python que combina o poder dos modelos de linguagem da plataforma Groq com a simplicidade e interatividade do Streamlit.\nO assistente é capaz de:\n\n💬 Manter um chat interativo com histórico de conversa\n💡 Sugerir soluções e boas práticas de código Python\n🐛 Explicar erros e bugs de forma didática\n⚙️ Gerar código do zero a partir de descrições em linguagem natural"
+    "text": "O “Pra onde vamos?” e uma assistente de viagens com personalidade própria — fala como uma amiga que já viajou muito, com dicas honestas, práticas e economicas. O usuario informa destino, orçamento e estilo de viagem, e a IA monta um roteiro completo dia a dia com estimativa de gastos, alertas culturais e dicas de hospedagem."
   },
   {
-    "objectID": "nlp/projeto1.html#visão-geral",
-    "href": "nlp/projeto1.html#visão-geral",
-    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "objectID": "nlp/projeto1.html#visao-geral",
+    "href": "nlp/projeto1.html#visao-geral",
+    "title": "Pra onde vamos? — Assistente de Planejamento de Viagens com IA",
     "section": "",
-    "text": "Este projeto consiste na construção de um assistente de programação em Python que combina o poder dos modelos de linguagem da plataforma Groq com a simplicidade e interatividade do Streamlit.\nO assistente é capaz de:\n\n💬 Manter um chat interativo com histórico de conversa\n💡 Sugerir soluções e boas práticas de código Python\n🐛 Explicar erros e bugs de forma didática\n⚙️ Gerar código do zero a partir de descrições em linguagem natural"
+    "text": "O “Pra onde vamos?” e uma assistente de viagens com personalidade própria — fala como uma amiga que já viajou muito, com dicas honestas, práticas e economicas. O usuario informa destino, orçamento e estilo de viagem, e a IA monta um roteiro completo dia a dia com estimativa de gastos, alertas culturais e dicas de hospedagem."
+  },
+  {
+    "objectID": "nlp/projeto1.html#demonstração",
+    "href": "nlp/projeto1.html#demonstração",
+    "title": "Pra onde vamos? — Assistente de Planejamento de Viagens com IA",
+    "section": "Demonstração",
+    "text": "Demonstração\n\n\n\nDemonstração do app funcionando\n\n\n👉 Acesse o app ao vivo"
+  },
+  {
+    "objectID": "nlp/projeto1.html#funcionalidades",
+    "href": "nlp/projeto1.html#funcionalidades",
+    "title": "Pra onde vamos? — Assistente de Planejamento de Viagens com IA",
+    "section": "Funcionalidades",
+    "text": "Funcionalidades\n\nChat interativo com histórico de conversa completo\nRoteiro estruturado dia a dia (manhã, tarde e noite)\nEstimativa de gastos por categoria\nAlertas culturais e dicas de seguranca\nFoco em viagens economicas e acessiveis\nInterface intuitiva com sidebar para configuracao"
   },
   {
     "objectID": "nlp/projeto1.html#tecnologias-utilizadas",
     "href": "nlp/projeto1.html#tecnologias-utilizadas",
-    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "title": "Pra onde vamos? — Assistente de Planejamento de Viagens com IA",
     "section": "Tecnologias Utilizadas",
-    "text": "Tecnologias Utilizadas\n\n\n\nTecnologia\nFunção\n\n\n\n\nGroq API\nInferência ultra-rápida com LLMs\n\n\nopenai/gpt-oss-20b\nModelo de linguagem base\n\n\nStreamlit\nInterface web interativa\n\n\nPython\nLinguagem principal"
+    "text": "Tecnologias Utilizadas\n\n\n\nTecnologia\nFuncao\n\n\n\n\nGroq API\nInferencia ultra-rapida com LLMs\n\n\nLlama 3.3 70B\nModelo de linguagem base\n\n\nStreamlit\nInterface web interativa\n\n\nStreamlit Cloud\nPlataforma de deploy e hospedagem do app\n\n\nStreamlit Secrets\nGerenciamento seguro da chave de API\n\n\nPython\nLinguagem principal"
+  },
+  {
+    "objectID": "nlp/projeto1.html#deploy",
+    "href": "nlp/projeto1.html#deploy",
+    "title": "Pra onde vamos? — Assistente de Planejamento de Viagens com IA",
+    "section": "Deploy",
+    "text": "Deploy\nO app esta publicado e disponivel publicamente via Streamlit Cloud. A chave da API Groq e gerenciada de forma segura atraves do Streamlit Secrets — ela nunca fica exposta no código ou no repósitorio, sendo carregada em tempo de execução pela plataforma:\n# Chave carregada de forma segura via Streamlit Secrets\ngroq_api_key = st.secrets[\"GROQ_API_KEY\"]\nclient = Groq(api_key=groq_api_key)\nDessa forma qualquer visitante pode usar o app sem precisar criar uma conta na Groq."
   },
   {
     "objectID": "nlp/projeto1.html#arquitetura-do-projeto",
     "href": "nlp/projeto1.html#arquitetura-do-projeto",
-    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "title": "Pra onde vamos? — Assistente de Planejamento de Viagens com IA",
     "section": "Arquitetura do Projeto",
-    "text": "Arquitetura do Projeto\n# Exemplo de como a conversa é gerenciada com histórico\nfrom groq import Groq\nimport streamlit as st\n\nclient = Groq()\n\nif \"messages\" not in st.session_state:\n    st.session_state.messages = [\n        {\"role\": \"system\", \"content\": \"Você é um assistente especialista em Python.\"}\n    ]\n\n# Exibe histórico\nfor msg in st.session_state.messages[1:]:\n    with st.chat_message(msg[\"role\"]):\n        st.markdown(msg[\"content\"])\n\n# Input do usuário\nif prompt := st.chat_input(\"Faça sua pergunta sobre Python...\"):\n    st.session_state.messages.append({\"role\": \"user\", \"content\": prompt})\n    \n    response = client.chat.completions.create(\n        model=\"openai/gpt-oss-20b\",\n        messages=st.session_state.messages\n    )\n    \n    answer = response.choices[0].message.content\n    st.session_state.messages.append({\"role\": \"assistant\", \"content\": answer})"
+    "text": "Arquitetura do Projeto\nO projeto e estruturado em tres camadas principais:\n1. Prompt de Sistema (Persona da IA)\nO comportamento da assistente e definido por um prompt detalhado que estabelece personalidade, regras de operacao e formato obrigatorio de resposta:\nCUSTOM_PROMPT = \"\"\"\nVoce e o \"Pra onde vamos?\", uma assistente de viagens experiente e \napaixonada por explorar o mundo gastando pouco.\nVoce fala como uma amiga que ja viajou muito com entusiasmo, girias \nleves, dicas honestas e aquele jeito de quem conhece os atalhos que \nos guias turisticos nao contam.\n\"\"\"\n2. Gerenciamento de Historico com Session State\nO histórico da conversa e mantido durante toda a sessão usando st.session_state, garantindo que o modelo tenha contexto completo:\nif \"messages\" not in st.session_state:\n    st.session_state.messages = []\n\n# Prepara mensagens para a API incluindo o prompt de sistema\nmessages_for_api = [{\"role\": \"system\", \"content\": CUSTOM_PROMPT}]\nfor msg in st.session_state.messages:\n    messages_for_api.append(msg)\n3. Integracao com a API da Groq\nchat_completion = client.chat.completions.create(\n    messages=messages_for_api,\n    model=\"llama-3.3-70b-versatile\",\n    temperature=0.7,\n    max_tokens=2048,\n)"
   },
   {
-    "objectID": "nlp/projeto1.html#principais-desafios",
-    "href": "nlp/projeto1.html#principais-desafios",
-    "title": "Assistente de Programação Python com Groq + Streamlit",
-    "section": "Principais Desafios",
-    "text": "Principais Desafios\nGerenciamento de histórico: Manter o contexto da conversa entre turnos exigiu o uso do st.session_state do Streamlit para persistir as mensagens.\nPrompt engineering: Definir um system prompt eficaz foi essencial para garantir respostas focadas em Python e com qualidade técnica."
+    "objectID": "nlp/projeto1.html#decisoes-tecnicas",
+    "href": "nlp/projeto1.html#decisoes-tecnicas",
+    "title": "Pra onde vamos? — Assistente de Planejamento de Viagens com IA",
+    "section": "Decisoes Tecnicas",
+    "text": "Decisoes Tecnicas\nPor que Groq? A plataforma Groq oferece inferencia extremamente rápida comparada a outras APIs, tornando a experiência do chat muito mais fluida e responsiva para o usuário.\nPor que temperatura 0.7? Equilibra criatividade nas sugestões de viagem com coerência nas informações práticas — respostas variam sem perder qualidade.\nPor que Streamlit Cloud? Permite deploy gratuito direto do GitHub com suporte nativo a secrets, sem necessidade de configurar servidores ou containers."
   },
   {
-    "objectID": "nlp/projeto1.html#resultados",
-    "href": "nlp/projeto1.html#resultados",
-    "title": "Assistente de Programação Python com Groq + Streamlit",
-    "section": "Resultados",
-    "text": "Resultados\n\nInterface responsiva e intuitiva para desenvolvedores\nRespostas com latência baixa graças à infraestrutura da Groq\nHistórico de conversa preservado durante toda a sessão"
+    "objectID": "nlp/projeto1.html#aprendizados",
+    "href": "nlp/projeto1.html#aprendizados",
+    "title": "Pra onde vamos? — Assistente de Planejamento de Viagens com IA",
+    "section": "Aprendizados",
+    "text": "Aprendizados\n\nPrompt engineering e fundamental: a qualidade do roteiro gerado depende diretamente de quao bem estruturado e detalhado e o prompt de sistema\nO st.session_state e essencial para manter contexto em apps de chat com Streamlit\nDefinir um escopo claro para a IA (só viagens) melhora muito a experiência do usuário\nO Streamlit Secrets e a forma correta de gerenciar credenciais em apps públicos"
   },
   {
     "objectID": "nlp/projeto1.html#próximos-passos",
     "href": "nlp/projeto1.html#próximos-passos",
-    "title": "Assistente de Programação Python com Groq + Streamlit",
+    "title": "Pra onde vamos? — Assistente de Planejamento de Viagens com IA",
     "section": "Próximos Passos",
-    "text": "Próximos Passos\n\nDeploy no Streamlit Cloud\nAdicionar suporte a múltiplos modelos da Groq\nImplementar upload de arquivos .py para análise"
+    "text": "Próximos Passos\n\nAdicionar suporte a multiplos idiomas\nIntegrar API de preços reais de passagens e hospedagem\nAdicionar mapa interativo do roteiro sugerido\nPermitir salvar e exportar roteiros em PDF ```"
   },
   {
     "objectID": "about.html",
@@ -109,7 +130,7 @@
     "href": "projetos.html#nlp-e-llms",
     "title": "Projetos",
     "section": "NLP e LLMs",
-    "text": "NLP e LLMs\n\nAssistente de Programacao Python com Groq e Streamlit\nChatbot especializado em Python combinando LLMs da Groq com interface Streamlit. Tecnologias: Groq API, Streamlit, Python"
+    "text": "NLP e LLMs\n\nAssistente de Planejamento de Viagens com Groq e Streamlit\nChatbot especializado em Planejar viagens combinando LLMs da Groq com interface Streamlit. Tecnologias: Groq API, Streamlit, Python"
   },
   {
     "objectID": "projetos.html#engenharia-de-dados",

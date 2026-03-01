@@ -23,8 +23,8 @@ Breve descrição do projeto.
 
 ## NLP e LLMs
 
-### [Assistente de Programacao Python com Groq e Streamlit](nlp/projeto1.qmd)
-Chatbot especializado em Python combinando LLMs da Groq com interface Streamlit.
+### [Assistente de Planejamento de Viagens com Groq e Streamlit](nlp/projeto1.qmd)
+Chatbot especializado em Planejar viagens combinando LLMs da Groq com interface Streamlit.
 **Tecnologias:** Groq API, Streamlit, Python
 
 ---

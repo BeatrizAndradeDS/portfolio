@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-01-01">
-<meta name="description" content="Chatbot especializado em Python que combina LLMs da Groq com interface interativa via Streamlit">
+<meta name="description" content="Chatbot especializado em planejamento de viagens economicas combinando LLMs da Groq com interface interativa via Streamlit">
 
-<title>Assistente de Programação Python com Groq + Streamlit – Beatriz Andrade — Data Science Portfolio</title>
+<title>Pra onde vamos? — Assistente de Planejamento de Viagens com IA – Beatriz Andrade — Data Science Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -168,18 +168,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assistente de Programação Python com Groq + Streamlit</h1>
+<h1 class="title">Pra onde vamos? — Assistente de Planejamento de Viagens com IA</h1>
   <div class="quarto-categories">
     <div class="quarto-category">NLP</div>
     <div class="quarto-category">LLMs</div>
     <div class="quarto-category">Streamlit</div>
+    <div class="quarto-category">Streamlit Cloud</div>
     <div class="quarto-category">Python</div>
+    <div class="quarto-category">Groq</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Chatbot especializado em Python que combina LLMs da Groq com interface interativa via Streamlit
+    Chatbot especializado em planejamento de viagens economicas combinando LLMs da Groq com interface interativa via Streamlit
   </div>
 </div>
 
@@ -202,15 +204,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="visão-geral" class="level2">
-<h2 class="anchored" data-anchor-id="visão-geral">Visão Geral</h2>
-<p>Este projeto consiste na construção de um <strong>assistente de programação em Python</strong> que combina o poder dos modelos de linguagem da plataforma <strong>Groq</strong> com a simplicidade e interatividade do <strong>Streamlit</strong>.</p>
-<p>O assistente é capaz de:</p>
+<section id="visao-geral" class="level2">
+<h2 class="anchored" data-anchor-id="visao-geral">Visao Geral</h2>
+<p>O <strong>“Pra onde vamos?”</strong> e uma assistente de viagens com personalidade própria — fala como uma amiga que já viajou muito, com dicas honestas, práticas e economicas. O usuario informa destino, orçamento e estilo de viagem, e a IA monta um roteiro completo dia a dia com estimativa de gastos, alertas culturais e dicas de hospedagem.</p>
+</section>
+<section id="demonstração" class="level2">
+<h2 class="anchored" data-anchor-id="demonstração">Demonstração</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens/pra-onde-vamos.gif" class="img-fluid figure-img"></p>
+<figcaption>Demonstração do app funcionando</figcaption>
+</figure>
+</div>
+<p>👉 <a href="https://pra-onde-vamos-bxa7kmj2haacvhrfgnbrpj.streamlit.app">Acesse o app ao vivo</a></p>
+</section>
+<section id="funcionalidades" class="level2">
+<h2 class="anchored" data-anchor-id="funcionalidades">Funcionalidades</h2>
 <ul>
-<li>💬 Manter um chat interativo com histórico de conversa</li>
-<li>💡 Sugerir soluções e boas práticas de código Python</li>
-<li>🐛 Explicar erros e bugs de forma didática</li>
-<li>⚙️ Gerar código do zero a partir de descrições em linguagem natural</li>
+<li>Chat interativo com histórico de conversa completo</li>
+<li>Roteiro estruturado dia a dia (manhã, tarde e noite)</li>
+<li>Estimativa de gastos por categoria</li>
+<li>Alertas culturais e dicas de seguranca</li>
+<li>Foco em viagens economicas e acessiveis</li>
+<li>Interface intuitiva com sidebar para configuracao</li>
 </ul>
 </section>
 <section id="tecnologias-utilizadas" class="level2">
@@ -219,21 +235,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>Tecnologia</th>
-<th>Função</th>
+<th>Funcao</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Groq API</td>
-<td>Inferência ultra-rápida com LLMs</td>
+<td>Inferencia ultra-rapida com LLMs</td>
 </tr>
 <tr class="even">
-<td>openai/gpt-oss-20b</td>
+<td>Llama 3.3 70B</td>
 <td>Modelo de linguagem base</td>
 </tr>
 <tr class="odd">
 <td>Streamlit</td>
 <td>Interface web interativa</td>
+</tr>
+<tr class="even">
+<td>Streamlit Cloud</td>
+<td>Plataforma de deploy e hospedagem do app</td>
+</tr>
+<tr class="odd">
+<td>Streamlit Secrets</td>
+<td>Gerenciamento seguro da chave de API</td>
 </tr>
 <tr class="even">
 <td>Python</td>
@@ -242,55 +266,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
+<section id="deploy" class="level2">
+<h2 class="anchored" data-anchor-id="deploy">Deploy</h2>
+<p>O app esta publicado e disponivel publicamente via <strong>Streamlit Cloud</strong>. A chave da API Groq e gerenciada de forma segura atraves do <strong>Streamlit Secrets</strong> — ela nunca fica exposta no código ou no repósitorio, sendo carregada em tempo de execução pela plataforma:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chave carregada de forma segura via Streamlit Secrets</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>groq_api_key <span class="op">=</span> st.secrets[<span class="st">"GROQ_API_KEY"</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> Groq(api_key<span class="op">=</span>groq_api_key)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Dessa forma qualquer visitante pode usar o app sem precisar criar uma conta na Groq.</p>
+</section>
 <section id="arquitetura-do-projeto" class="level2">
 <h2 class="anchored" data-anchor-id="arquitetura-do-projeto">Arquitetura do Projeto</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemplo de como a conversa é gerenciada com histórico</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> groq <span class="im">import</span> Groq</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> Groq()</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">"messages"</span> <span class="kw">not</span> <span class="kw">in</span> st.session_state:</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    st.session_state.messages <span class="op">=</span> [</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        {<span class="st">"role"</span>: <span class="st">"system"</span>, <span class="st">"content"</span>: <span class="st">"Você é um assistente especialista em Python."</span>}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Exibe histórico</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> msg <span class="kw">in</span> st.session_state.messages[<span class="dv">1</span>:]:</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> st.chat_message(msg[<span class="st">"role"</span>]):</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        st.markdown(msg[<span class="st">"content"</span>])</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Input do usuário</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> prompt <span class="op">:=</span> st.chat_input(<span class="st">"Faça sua pergunta sobre Python..."</span>):</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    st.session_state.messages.append({<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: prompt})</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> client.chat.completions.create(</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        model<span class="op">=</span><span class="st">"openai/gpt-oss-20b"</span>,</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        messages<span class="op">=</span>st.session_state.messages</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    answer <span class="op">=</span> response.choices[<span class="dv">0</span>].message.content</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    st.session_state.messages.append({<span class="st">"role"</span>: <span class="st">"assistant"</span>, <span class="st">"content"</span>: answer})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>O projeto e estruturado em tres camadas principais:</p>
+<p><strong>1. Prompt de Sistema (Persona da IA)</strong></p>
+<p>O comportamento da assistente e definido por um prompt detalhado que estabelece personalidade, regras de operacao e formato obrigatorio de resposta:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>CUSTOM_PROMPT <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="st">Voce e o "Pra onde vamos?", uma assistente de viagens experiente e </span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="st">apaixonada por explorar o mundo gastando pouco.</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="st">Voce fala como uma amiga que ja viajou muito com entusiasmo, girias </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="st">leves, dicas honestas e aquele jeito de quem conhece os atalhos que </span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="st">os guias turisticos nao contam.</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>2. Gerenciamento de Historico com Session State</strong></p>
+<p>O histórico da conversa e mantido durante toda a sessão usando <code>st.session_state</code>, garantindo que o modelo tenha contexto completo:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">"messages"</span> <span class="kw">not</span> <span class="kw">in</span> st.session_state:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    st.session_state.messages <span class="op">=</span> []</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepara mensagens para a API incluindo o prompt de sistema</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>messages_for_api <span class="op">=</span> [{<span class="st">"role"</span>: <span class="st">"system"</span>, <span class="st">"content"</span>: CUSTOM_PROMPT}]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> msg <span class="kw">in</span> st.session_state.messages:</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    messages_for_api.append(msg)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>3. Integracao com a API da Groq</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>chat_completion <span class="op">=</span> client.chat.completions.create(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    messages<span class="op">=</span>messages_for_api,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"llama-3.3-70b-versatile"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    temperature<span class="op">=</span><span class="fl">0.7</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    max_tokens<span class="op">=</span><span class="dv">2048</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="principais-desafios" class="level2">
-<h2 class="anchored" data-anchor-id="principais-desafios">Principais Desafios</h2>
-<p><strong>Gerenciamento de histórico:</strong> Manter o contexto da conversa entre turnos exigiu o uso do <code>st.session_state</code> do Streamlit para persistir as mensagens.</p>
-<p><strong>Prompt engineering:</strong> Definir um system prompt eficaz foi essencial para garantir respostas focadas em Python e com qualidade técnica.</p>
+<section id="decisoes-tecnicas" class="level2">
+<h2 class="anchored" data-anchor-id="decisoes-tecnicas">Decisoes Tecnicas</h2>
+<p><strong>Por que Groq?</strong> A plataforma Groq oferece inferencia extremamente rápida comparada a outras APIs, tornando a experiência do chat muito mais fluida e responsiva para o usuário.</p>
+<p><strong>Por que temperatura 0.7?</strong> Equilibra criatividade nas sugestões de viagem com coerência nas informações práticas — respostas variam sem perder qualidade.</p>
+<p><strong>Por que Streamlit Cloud?</strong> Permite deploy gratuito direto do GitHub com suporte nativo a secrets, sem necessidade de configurar servidores ou containers.</p>
 </section>
-<section id="resultados" class="level2">
-<h2 class="anchored" data-anchor-id="resultados">Resultados</h2>
+<section id="aprendizados" class="level2">
+<h2 class="anchored" data-anchor-id="aprendizados">Aprendizados</h2>
 <ul>
-<li>Interface responsiva e intuitiva para desenvolvedores</li>
-<li>Respostas com latência baixa graças à infraestrutura da Groq</li>
-<li>Histórico de conversa preservado durante toda a sessão</li>
+<li>Prompt engineering e fundamental: a qualidade do roteiro gerado depende diretamente de quao bem estruturado e detalhado e o prompt de sistema</li>
+<li>O <code>st.session_state</code> e essencial para manter contexto em apps de chat com Streamlit</li>
+<li>Definir um escopo claro para a IA (só viagens) melhora muito a experiência do usuário</li>
+<li>O Streamlit Secrets e a forma correta de gerenciar credenciais em apps públicos</li>
 </ul>
 </section>
 <section id="próximos-passos" class="level2">
 <h2 class="anchored" data-anchor-id="próximos-passos">Próximos Passos</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Deploy no Streamlit Cloud</label></li>
-<li><label><input type="checkbox">Adicionar suporte a múltiplos modelos da Groq</label></li>
-<li><label><input type="checkbox">Implementar upload de arquivos <code>.py</code> para análise</label></li>
+<ul>
+<li>Adicionar suporte a multiplos idiomas</li>
+<li>Integrar API de preços reais de passagens e hospedagem</li>
+<li>Adicionar mapa interativo do roteiro sugerido</li>
+<li>Permitir salvar e exportar roteiros em PDF ```</li>
 </ul>
 
 
