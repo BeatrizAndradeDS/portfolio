@@ -49,11 +49,11 @@
     "text": "Arquitetura do Projeto\nO projeto e estruturado em tres camadas principais:\n1. Prompt de Sistema (Persona da IA)\nO comportamento da assistente e definido por um prompt detalhado que estabelece personalidade, regras de operacao e formato obrigatorio de resposta:\nCUSTOM_PROMPT = \"\"\"\nVoce e o \"Pra onde vamos?\", uma assistente de viagens experiente e \napaixonada por explorar o mundo gastando pouco.\nVoce fala como uma amiga que ja viajou muito com entusiasmo, girias \nleves, dicas honestas e aquele jeito de quem conhece os atalhos que \nos guias turisticos nao contam.\n\"\"\"\n2. Gerenciamento de Historico com Session State\nO histórico da conversa e mantido durante toda a sessão usando st.session_state, garantindo que o modelo tenha contexto completo:\nif \"messages\" not in st.session_state:\n    st.session_state.messages = []\n\n# Prepara mensagens para a API incluindo o prompt de sistema\nmessages_for_api = [{\"role\": \"system\", \"content\": CUSTOM_PROMPT}]\nfor msg in st.session_state.messages:\n    messages_for_api.append(msg)\n3. Integracao com a API da Groq\nchat_completion = client.chat.completions.create(\n    messages=messages_for_api,\n    model=\"llama-3.3-70b-versatile\",\n    temperature=0.7,\n    max_tokens=2048,\n)"
   },
   {
-    "objectID": "nlp/projeto1.html#decisoes-tecnicas",
-    "href": "nlp/projeto1.html#decisoes-tecnicas",
+    "objectID": "nlp/projeto1.html#decisões-técnicas",
+    "href": "nlp/projeto1.html#decisões-técnicas",
     "title": "Pra onde vamos? — Assistente de Planejamento de Viagens com IA",
-    "section": "Decisoes Tecnicas",
-    "text": "Decisoes Tecnicas\nPor que Groq? A plataforma Groq oferece inferencia extremamente rápida comparada a outras APIs, tornando a experiência do chat muito mais fluida e responsiva para o usuário.\nPor que temperatura 0.7? Equilibra criatividade nas sugestões de viagem com coerência nas informações práticas — respostas variam sem perder qualidade.\nPor que Streamlit Cloud? Permite deploy gratuito direto do GitHub com suporte nativo a secrets, sem necessidade de configurar servidores ou containers."
+    "section": "Decisões Técnicas",
+    "text": "Decisões Técnicas\nPor que Groq? A plataforma Groq oferece inferência extremamente rápida comparada a outras APIs, tornando a experiência do chat muito mais fluida e responsiva para o usuário.\nPor que temperatura 0.7? Equilibra criatividade nas sugestões de viagem com coerência nas informações práticas — respostas variam sem perder qualidade.\nPor que Streamlit Cloud? Permite deploy gratuito direto do GitHub com suporte nativo a secrets, sem necessidade de configurar servidores ou containers."
   },
   {
     "objectID": "nlp/projeto1.html#aprendizados",
