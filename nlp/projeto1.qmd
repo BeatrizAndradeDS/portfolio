@@ -94,9 +94,9 @@ chat_completion = client.chat.completions.create(
 )
 ```
 
-## Decisoes Tecnicas
+## Decisões Técnicas
 
-**Por que Groq?** A plataforma Groq oferece inferencia extremamente rápida 
+**Por que Groq?** A plataforma Groq oferece inferência extremamente rápida 
 comparada a outras APIs, tornando a experiência do chat muito mais fluida 
 e responsiva para o usuário.
 
