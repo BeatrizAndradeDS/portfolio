@@ -4,7 +4,7 @@ project:
 
 
 website:
-  title: "Beatriz Andrade — Data Science Portfolio"
+  title: "BA | Data Science"
   navbar:
     left:
       - href: index.qmd

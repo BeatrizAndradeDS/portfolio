@@ -3,37 +3,19 @@ title: "Projetos"
 page-layout: full
 ---
 
-Aqui estão meus principais projetos organizados por área.
-
-## Machine Learning
-
-### [Nome do Projeto 1](ml/projeto3.qmd)
-Breve descrição do projeto.
-**Tecnologias:** Scikit-learn, XGBoost, Pandas
-
----
-
-## Analise Exploratoria e Visualizacao
-
-### [Nome do Projeto 2](viz/projeto2.qmd)
-Breve descrição do projeto.
-**Tecnologias:** Plotly, Seaborn, Pandas
+Projetos desenvolvidos ao longo da minha formação e atuação profissional — combinando análise de negócio, modelagem e visualização de dados.
 
 ---
 
 ## NLP e LLMs
 
 ### [Assistente de Planejamento de Viagens com Groq e Streamlit](nlp/projeto1.qmd)
-Chatbot especializado em Planejar viagens combinando LLMs da Groq com interface Streamlit.
+Chatbot especializado em planejamento de viagens, combinando LLMs da Groq com interface Streamlit.
 **Tecnologias:** Groq API, Streamlit, Python
 
 ---
 
-## Engenharia de Dados
-
-### [Nome do Projeto 4](engenharia/projeto4.qmd)
-Breve descrição do projeto.
-**Tecnologias:** Airflow, SQL, Docker
+## Em breve outros projetos
 
 ---
 ```

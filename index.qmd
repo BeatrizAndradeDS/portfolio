@@ -1,24 +1,26 @@
 ---
 title: "Beatriz Andrade"
-subtitle: "Data Scientist | Machine Learning | NLP | Data Engineering"
+subtitle: "Analista de Dados | Business Analytics | Power BI | SQL | Python"
 page-layout: full
 ---
 
 ## Olá, seja bem-vindo ao meu portfólio!
 
-Sou cientista de dados com experiência em **Machine Learning**, **NLP/LLMs**, 
-**análise exploratória** e **engenharia de dados**. Este site reúne meus principais 
-projetos com código, visualizações e resultados detalhados.
+Mais de 18 anos tomando decisões baseadas em dados — antes mesmo de virar moda.
+Passei por operações industriais, consultoria, mercado financeiro e planejamento de produção, sempre conectando números a resultados reais: **+10% de produtividade**, **-5% em custos logísticos**, 
+**+8% em vendas**, **18% a.a. como trader**.
+
+Hoje combino essa bagagem de negócios com ferramentas modernas de dados para entregar análises que fazem sentido para quem decide.
 
 ## Skills
 
 | Área | Ferramentas |
 |---|---|
-| Machine Learning | Scikit-learn, XGBoost, LightGBM |
-| NLP / LLMs | HuggingFace, LangChain, spaCy |
-| Visualização | Plotly, Matplotlib, Seaborn |
-| Engenharia de Dados | Pandas, SQL, Airflow |
-| Deploy | FastAPI, Docker, Streamlit |
+| Análise & Visualização | Power BI, Plotly, Matplotlib, Seaborn |
+| Dados | SQL, Python (pandas, NumPy), Jupyter |
+| Estatística | Descritiva, inferencial, análise exploratória |
+| Machine Learning (experiência em formação) | Scikit-learn, XGBoost, Regressões, Séries Temporais |
+| Infraestrutura | Docker, AWS (S3, EC2) |
 
 ## Contato
 

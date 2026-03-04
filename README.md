@@ -6,9 +6,7 @@
 
 ## Sobre
 
-Ola! Sou Beatriz Andrade, cientista de dados em transição de carreira sempre animada 
-para transformar dados em soluções. Este repositório contém o codigo-fonte
-do meu portfolio pessoal, construido com Quarto e hospedado via GitHub Pages.
+Ola! Sou Beatriz Andrade, cientista de dados em transição de carreira sempre animada para transformar dados em soluções. Este repositório contém o codigo-fonte do meu portfolio pessoal, construido com Quarto e hospedado via GitHub Pages.
 
 ## Tecnologias do Site
 
