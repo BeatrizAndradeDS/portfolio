@@ -81,21 +81,21 @@
     "href": "index.html",
     "title": "Beatriz Andrade",
     "section": "",
-    "text": "Sou cientista de dados com experiência em Machine Learning, NLP/LLMs, análise exploratória e engenharia de dados. Este site reúne meus principais projetos com código, visualizações e resultados detalhados."
+    "text": "Mais de 18 anos tomando decisões baseadas em dados — antes mesmo de virar moda. Passei por operações industriais, consultoria, mercado financeiro e planejamento de produção, sempre conectando números a resultados reais: +10% de produtividade, -5% em custos logísticos, +8% em vendas, 18% a.a. como trader.\nHoje combino essa bagagem de negócios com ferramentas modernas de dados para entregar análises que fazem sentido para quem decide."
   },
   {
     "objectID": "index.html#olá-seja-bem-vindo-ao-meu-portfólio",
     "href": "index.html#olá-seja-bem-vindo-ao-meu-portfólio",
     "title": "Beatriz Andrade",
     "section": "",
-    "text": "Sou cientista de dados com experiência em Machine Learning, NLP/LLMs, análise exploratória e engenharia de dados. Este site reúne meus principais projetos com código, visualizações e resultados detalhados."
+    "text": "Mais de 18 anos tomando decisões baseadas em dados — antes mesmo de virar moda. Passei por operações industriais, consultoria, mercado financeiro e planejamento de produção, sempre conectando números a resultados reais: +10% de produtividade, -5% em custos logísticos, +8% em vendas, 18% a.a. como trader.\nHoje combino essa bagagem de negócios com ferramentas modernas de dados para entregar análises que fazem sentido para quem decide."
   },
   {
     "objectID": "index.html#skills",
     "href": "index.html#skills",
     "title": "Beatriz Andrade",
     "section": "Skills",
-    "text": "Skills\n\n\n\nÁrea\nFerramentas\n\n\n\n\nMachine Learning\nScikit-learn, XGBoost, LightGBM\n\n\nNLP / LLMs\nHuggingFace, LangChain, spaCy\n\n\nVisualização\nPlotly, Matplotlib, Seaborn\n\n\nEngenharia de Dados\nPandas, SQL, Airflow\n\n\nDeploy\nFastAPI, Docker, Streamlit"
+    "text": "Skills\n\n\n\n\n\n\n\nÁrea\nFerramentas\n\n\n\n\nAnálise & Visualização\nPower BI, Plotly, Matplotlib, Seaborn\n\n\nDados\nSQL, Python (pandas, NumPy), Jupyter\n\n\nEstatística\nDescritiva, inferencial, análise exploratória\n\n\nMachine Learning (experiência em formação)\nScikit-learn, XGBoost, Regressões, Séries Temporais\n\n\nInfraestrutura\nDocker, AWS (S3, EC2)"
   },
   {
     "objectID": "index.html#contato",
@@ -109,34 +109,20 @@
     "href": "projetos.html",
     "title": "Projetos",
     "section": "",
-    "text": "Aqui estão meus principais projetos organizados por área."
-  },
-  {
-    "objectID": "projetos.html#machine-learning",
-    "href": "projetos.html#machine-learning",
-    "title": "Projetos",
-    "section": "Machine Learning",
-    "text": "Machine Learning\n\nNome do Projeto 1\nBreve descrição do projeto. Tecnologias: Scikit-learn, XGBoost, Pandas"
-  },
-  {
-    "objectID": "projetos.html#analise-exploratoria-e-visualizacao",
-    "href": "projetos.html#analise-exploratoria-e-visualizacao",
-    "title": "Projetos",
-    "section": "Analise Exploratoria e Visualizacao",
-    "text": "Analise Exploratoria e Visualizacao\n\nNome do Projeto 2\nBreve descrição do projeto. Tecnologias: Plotly, Seaborn, Pandas"
+    "text": "Projetos desenvolvidos ao longo da minha formação e atuação profissional — combinando análise de negócio, modelagem e visualização de dados."
   },
   {
     "objectID": "projetos.html#nlp-e-llms",
     "href": "projetos.html#nlp-e-llms",
     "title": "Projetos",
     "section": "NLP e LLMs",
-    "text": "NLP e LLMs\n\nAssistente de Planejamento de Viagens com Groq e Streamlit\nChatbot especializado em Planejar viagens combinando LLMs da Groq com interface Streamlit. Tecnologias: Groq API, Streamlit, Python"
+    "text": "NLP e LLMs\n\nAssistente de Planejamento de Viagens com Groq e Streamlit\nChatbot especializado em planejamento de viagens, combinando LLMs da Groq com interface Streamlit. Tecnologias: Groq API, Streamlit, Python"
   },
   {
-    "objectID": "projetos.html#engenharia-de-dados",
-    "href": "projetos.html#engenharia-de-dados",
+    "objectID": "projetos.html#em-breve-outros-projetos",
+    "href": "projetos.html#em-breve-outros-projetos",
     "title": "Projetos",
-    "section": "Engenharia de Dados",
-    "text": "Engenharia de Dados\n\nNome do Projeto 4\nBreve descrição do projeto. Tecnologias: Airflow, SQL, Docker\n\n```"
+    "section": "Em breve outros projetos",
+    "text": "Em breve outros projetos\n\n```"
   }
 ]
